@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Players from './components/Players';
+import NavBar from './components/Navbar';
 import './App.css';
 
 class App extends React.Component {
@@ -23,8 +24,9 @@ class App extends React.Component {
 render() {
   return (
     <div className="App">
-      <h1>Womens World Cup Players</h1>
-      <h4>In order of search popularity:</h4>
+      <NavBar />
+      
+      <h2>In order of search popularity:</h2>
       <Players players={this.state.players} />
     </div>
   )

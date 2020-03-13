@@ -1,0 +1,12 @@
+.playersDiv{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 2rem;
+    margin: 24px auto;
+    width: 44%;
+}
+
+.playersDiv p{
+    margin: 24px;
+}
