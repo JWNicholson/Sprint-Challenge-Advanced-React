@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Players from './components/Players';
 import './App.css';
 
 class App extends React.Component {
@@ -13,7 +14,10 @@ class App extends React.Component {
       .then(res => {
         console.log("Player data ", res.data);
         this.setState({players: res.data});
-      }, []);
+      }, [])
+      .catch(err => {
+        console.log("No data returned", err )
+      })
   }//end state
 
 render() {
@@ -21,7 +25,7 @@ render() {
     <div className="App">
       <h1>Womens World Cup Players</h1>
       <h4>In order of search popularity:</h4>
-      {/* <Players players={this.state.players} /> */}
+      <Players players={this.state.players} />
     </div>
   )
 }
